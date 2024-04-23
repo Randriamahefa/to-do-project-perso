@@ -1,0 +1,173 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+}
+body {
+    font-family: 'Sans serif', cursive;
+}
+
+h1 {
+  margin: 45px 0px;
+  font-size: 28px;
+  font-family: "Raleway", sans-serif;
+}
+h3 {
+  font-size: 22px;
+  opacity: 0.4;
+}
+
+input {
+  border: none;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+                                /*main*/
+.main {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+.main header {
+  padding: 0px 40px;
+  color: #f1f1f1;
+  text-align: center;
+  height: 250px;
+}
+
+.main .toDo {
+  width: 70%;
+  background-color: #050505;
+}
+.main .toDo h3 {
+  color: #f1f1f1;
+  margin-left: 45px ;
+}
+
+.main .completed {
+  width: 30%;
+  background-color: #f1f1f1;
+  padding: 0px 15px;
+}                                     
+
+                                           /*Liste*/
+
+
+ul li {
+  list-style-type: none;
+  transition: 0.5s; 
+  overflow: hidden;
+  white-space: wrap;
+  text-overflow: ellipsis;
+}
+
+ul.listTask  {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+ul.listTask li {
+  margin-bottom: 25px;
+  cursor: pointer;
+  padding: 24px 0;
+  font-size: 20px;
+  color: #f1f1f1;
+  box-shadow: 0 1px 2px 0 rgba(255, 255, 255,0.5);
+}
+ul.listTask li:hover {
+  text-decoration: line-through;
+  color: #da3f3f;
+  opacity: 0.5;
+}
+ul.listTaskCompleted li {
+  font-size: 16px;
+  margin-bottom: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.35), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+ul.listTaskCompleted li:hover {
+  box-shadow: 0 4px 8px 0 rgb(0, 0, 0);
+}
+ul.listTaskCompleted li .icon {
+  border: 2px solid #43f343;
+  border-radius: 2px;
+  margin-right: 17px;
+  padding: 2px;
+}
+                              /*button*/
+
+
+button {
+  border: none;
+  padding: 10px;
+  width: 150px;
+  color: #050505;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add {
+  background: #b9b9b9;
+  float: left;
+}
+
+.clear, .clearTaskCompleted {
+  background: #d60101;
+  margin-top: 20px;
+}
+.add:hover  {
+  background: #7e7d7d;
+  color: #f1f1f1;
+}
+.clear:hover, .clearTaskCompleted:hover {
+  background-color: #da3f3f;
+  color: #f1f1f1;
+}
+
+
+ @media screen and (max-width: 972px ) {
+  input {
+    width: 100%;
+  } 
+  .add {
+    margin-top: 20px;
+    float: none;
+  }
+  ul.listTaskCompleted li .icon {
+    padding: 0px;
+    margin-right: 7px;
+  }
+ }
+
+ @media screen and (max-width: 707px )  {
+    h1 {
+      font-size: 25px;
+    }
+    .main header , .main .completed {
+      padding: 0px 10px;
+    }
+   ul.listTaskCompleted li {
+    font-size: 14px;
+   }
+   ul.listTask li , h3{
+    font-size: 18px;
+   }
+ }
+
+ @media screen and (max-width: 608px )  {
+ .main {
+  flex-direction: column;
+ }
+ .main .toDo , .main .completed {
+  width: 100%;
+ }
+
+}
